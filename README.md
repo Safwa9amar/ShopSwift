@@ -1,6 +1,6 @@
 # ShopSwift - E-commerce Mobile App
 
-A full-featured e-commerce mobile application built with React Native and Expo, featuring product browsing, shopping cart, user authentication, and an AI-powered admin dashboard.
+A full-featured e-commerce mobile application built with React Native and Expo, featuring product browsing, shopping cart, user authentication, and an AI-powered admin dashboard. A separate Next.js app provides the web version.
 
 ## Features
 
@@ -34,13 +34,14 @@ A full-featured e-commerce mobile application built with React Native and Expo, 
 
 ## Tech Stack
 
-- **Framework**: React Native with Expo
+- **Mobile Framework**: React Native with Expo
 - **Language**: TypeScript
 - **Navigation**: Expo Router with file-based routing
 - **State Management**: React Context + AsyncStorage
 - **UI Components**: Custom components with NativeWind styling
 - **Icons**: Expo Vector Icons
 - **Images**: Expo Image for optimized image handling
+- **Web**: Next.js (App Router) + React + Tailwind CSS
 
 ## Project Structure
 
@@ -80,6 +81,12 @@ hooks/
 
 lib/
 └── products.ts       # Product data and types
+
+web/                  # Next.js web app
+├── src/              # Next.js source (App Router)
+├── next.config.ts    # Next.js configuration
+├── package.json      # Web scripts (dev/build/start)
+└── README.md         # Web app notes
 ```
 
 ## Getting Started
@@ -87,10 +94,10 @@ lib/
 ### Prerequisites
 - Node.js (v16 or higher)
 - npm or yarn
-- Expo CLI
+- Expo CLI (for mobile)
 - iOS Simulator or Android Emulator (optional)
 
-### Installation
+### Installation (mobile app)
 
 1. Clone the repository:
 ```bash
@@ -103,22 +110,46 @@ cd shopswift
 npm install
 ```
 
-3. Start the development server:
+3. Start the development server (Expo):
 ```bash
 npm start
 ```
 
-4. Run on your preferred platform:
+4. Run on your preferred mobile platform:
 ```bash
 # iOS Simulator
 npm run ios
 
 # Android Emulator
 npm run android
-
-# Web browser
-npm run web
 ```
+
+## Web Version (Next.js)
+
+The web version is developed using Next.js and lives in the `web/` directory.
+
+### Run locally
+```bash
+cd web
+npm install
+npm run dev
+```
+
+By default, the dev server runs on port 9002 (see `web/package.json`).
+
+### Production build
+```bash
+cd web
+npm run build
+npm start
+```
+
+### Deploy
+- **Vercel** (recommended): Import the `web/` directory. Build/Output are detected automatically (`npm run build` / `next start`).
+- **Netlify**: Build command `npm run build`, publish `.next` with a Next.js adapter, or use Next on Netlify.
+- **Other hosts**: Use a Node server to run `next start`, or set up an adapter for your platform.
+
+> For more details, see `web/README.md`.
 
 ## Demo Credentials
 
@@ -195,8 +226,4 @@ For support and questions, please open an issue in the repository or contact the
 
 ---
 
-Built with ❤️ using React Native and Expo
-# ShopSwift
-# ShopSwift
-# ShopSwift
-# ShopSwift
+Built with ❤️ using React Native, Expo, and Next.js
