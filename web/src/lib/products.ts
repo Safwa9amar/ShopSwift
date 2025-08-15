@@ -1,0 +1,68 @@
+import type { Product } from '@/lib/types';
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Astro-Gamer Headset',
+    description: 'Experience immersive 3D audio with this high-fidelity gaming headset. Noise-cancelling mic and customizable RGB lighting.',
+    price: 129.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Electronics',
+  },
+  {
+    id: '2',
+    name: 'Quantum-Leap Keyboard',
+    description: 'Mechanical keyboard with ultra-responsive switches. Per-key RGB backlighting and a durable aluminum frame.',
+    price: 179.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Electronics',
+  },
+  {
+    id: '3',
+    name: '"The Code" Mug',
+    description: 'A sleek, dark-themed mug for your favorite beverage. Perfect for late-night coding sessions. Microwave and dishwasher safe.',
+    price: 19.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Home Goods',
+  },
+  {
+    id: '4',
+    name: 'Ergo-Flow Mouse',
+    description: 'Ergonomic vertical mouse designed for comfort and precision. Reduces wrist strain during long hours of use.',
+    price: 79.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Electronics',
+  },
+  {
+    id: '5',
+    name: 'Cyberpunk Desk Mat',
+    description: 'Large desk mat featuring a stunning cyberpunk city-scape. Smooth surface for your mouse and keyboard.',
+    price: 34.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Accessories',
+  },
+  {
+    id: '6',
+    name: 'Smart RGB Lamp',
+    description: 'A modern desk lamp with customizable colors and brightness, controllable via a mobile app. Set the perfect mood for any task.',
+    price: 59.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Home Goods',
+  },
+  {
+    id: '7',
+    name: 'Developer Hoodie',
+    description: 'A comfortable and stylish hoodie with a minimalist code logo. Made from premium, soft-touch fabric.',
+    price: 64.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Apparel',
+  },
+  {
+    id: '8',
+    name: 'Cable Management Box',
+    description: 'Keep your desk tidy with this sleek cable management box. Hides power strips and excess cables for a clean setup.',
+    price: 24.99,
+    imageUrl: 'https://placehold.co/600x400.png',
+    category: 'Accessories',
+  },
+];
