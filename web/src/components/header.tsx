@@ -1,11 +1,12 @@
 'use client';
 
-import Link from 'next/link';
-import { ShoppingCart, Moon, Sun, LayoutDashboard, Code } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/contexts/theme-provider';
-import { useCart } from '@/contexts/cart-provider';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { useCart } from '@/contexts/cart-provider';
+import { useTheme } from '@/contexts/theme-provider';
+import { LayoutDashboard, Moon, ShoppingCart, Sun } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -16,7 +17,7 @@ export default function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <nav className="flex items-center gap-4 lg:gap-6">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Code className="h-6 w-6 text-primary" />
+            <Image alt='shopswift' width={50} height={50} src="/ic_launcher.png" className="h-10 w-10 ml-5 text-primary" />
             <span className="font-bold sm:inline-block">ShopSwift</span>
           </Link>
           <Link href="/admin" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
